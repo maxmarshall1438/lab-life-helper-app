@@ -16,6 +16,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@marshallsci" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Security headers to restrict iframe embedding -->
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' marshallscientific.com *.marshallscientific.com new.marshallscientific.com;">
+    <meta http-equiv="X-Frame-Options" content="ALLOW-FROM https://marshallscientific.com https://new.marshallscientific.com">
   </head>
 
   <body>
