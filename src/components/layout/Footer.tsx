@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 text-lab-blue font-semibold text-lg mb-4">
             <FlaskConical className="h-5 w-5" />
-            <span>LabAssist</span>
+            <span>Marshall Scientific Lab Assistant</span>
           </div>
           <p className="text-sm text-gray-500 text-center mb-2">
             Your everyday lab companion for chemistry and biology calculations.
           </p>
           <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} LabAssist. All rights reserved.
+            © {new Date().getFullYear()} Marshall Scientific Lab Assistant. All rights reserved.
           </p>
         </div>
       </div>

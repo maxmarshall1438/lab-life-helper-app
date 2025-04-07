@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-lab-blue font-semibold text-xl">
           <FlaskConical className="h-7 w-7" />
-          <span>LabAssist</span>
+          <span>Marshall Scientific Lab Assistant</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-gray-600 hover:text-lab-blue font-medium transition">Home</Link>

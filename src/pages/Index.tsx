@@ -16,7 +16,7 @@ const Index = () => {
       <main className="flex-1 container px-4 py-8 mx-auto">
         <div className="mb-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Lab Assistant
+            Marshall Scientific Lab Assistant
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Your everyday companion for chemistry and biology calculations
