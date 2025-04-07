@@ -9,6 +9,7 @@ import TemperatureConverter from './converters/TemperatureConverter';
 import ConcentrationConverter from './converters/ConcentrationConverter';
 import PressureConverter from './converters/PressureConverter';
 import FlowRateConverter from './converters/FlowRateConverter';
+import CentrifugeCalculator from '@/components/calculators/chemistry/CentrifugeCalculator';
 
 const UnitConverter = () => {
   const [activeTab, setActiveTab] = useState('mass');
@@ -26,13 +27,14 @@ const UnitConverter = () => {
       </CardHeader>
       <CardContent className="p-6">
         <Tabs defaultValue="mass" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-6 mb-6">
+          <TabsList className="grid grid-cols-2 md:grid-cols-7 mb-6">
             <TabsTrigger value="mass">Mass</TabsTrigger>
             <TabsTrigger value="volume">Volume</TabsTrigger>
             <TabsTrigger value="temperature">Temperature</TabsTrigger>
             <TabsTrigger value="concentration">Concentration</TabsTrigger>
             <TabsTrigger value="pressure">Pressure</TabsTrigger>
             <TabsTrigger value="flowrate">Flow Rate</TabsTrigger>
+            <TabsTrigger value="centrifuge">RPM/RCF</TabsTrigger>
           </TabsList>
           <TabsContent value="mass" className="mt-0">
             <MassConverter />
@@ -51,6 +53,9 @@ const UnitConverter = () => {
           </TabsContent>
           <TabsContent value="flowrate" className="mt-0">
             <FlowRateConverter />
+          </TabsContent>
+          <TabsContent value="centrifuge" className="mt-0">
+            <CentrifugeCalculator />
           </TabsContent>
         </Tabs>
       </CardContent>
