@@ -7,6 +7,8 @@ import MassConverter from './converters/MassConverter';
 import VolumeConverter from './converters/VolumeConverter';
 import TemperatureConverter from './converters/TemperatureConverter';
 import ConcentrationConverter from './converters/ConcentrationConverter';
+import PressureConverter from './converters/PressureConverter';
+import FlowRateConverter from './converters/FlowRateConverter';
 
 const UnitConverter = () => {
   const [activeTab, setActiveTab] = useState('mass');
@@ -24,11 +26,13 @@ const UnitConverter = () => {
       </CardHeader>
       <CardContent className="p-6">
         <Tabs defaultValue="mass" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-6">
+          <TabsList className="grid grid-cols-2 md:grid-cols-6 mb-6">
             <TabsTrigger value="mass">Mass</TabsTrigger>
             <TabsTrigger value="volume">Volume</TabsTrigger>
             <TabsTrigger value="temperature">Temperature</TabsTrigger>
             <TabsTrigger value="concentration">Concentration</TabsTrigger>
+            <TabsTrigger value="pressure">Pressure</TabsTrigger>
+            <TabsTrigger value="flowrate">Flow Rate</TabsTrigger>
           </TabsList>
           <TabsContent value="mass" className="mt-0">
             <MassConverter />
@@ -41,6 +45,12 @@ const UnitConverter = () => {
           </TabsContent>
           <TabsContent value="concentration" className="mt-0">
             <ConcentrationConverter />
+          </TabsContent>
+          <TabsContent value="pressure" className="mt-0">
+            <PressureConverter />
+          </TabsContent>
+          <TabsContent value="flowrate" className="mt-0">
+            <FlowRateConverter />
           </TabsContent>
         </Tabs>
       </CardContent>

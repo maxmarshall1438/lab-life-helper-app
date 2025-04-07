@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import ChemistryCalculator from '@/components/calculators/ChemistryCalculator';
 import BiologyCalculator from '@/components/calculators/BiologyCalculator';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import CentrifugeCalculator from '@/components/calculators/chemistry/CentrifugeCalculator';
+import MolarityCalculator from '@/components/calculators/chemistry/MolarityCalculator';
 
 const CalculatorsPage = () => {
+  const [activeTab, setActiveTab] = useState('chemistry');
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -23,6 +27,14 @@ const CalculatorsPage = () => {
         <div className="space-y-8">
           <div className="mb-8">
             <ChemistryCalculator />
+          </div>
+          
+          <div className="mb-8">
+            <CentrifugeCalculator />
+          </div>
+          
+          <div className="mb-8">
+            <MolarityCalculator />
           </div>
           
           <div className="mb-8">
